@@ -1,0 +1,19 @@
+{
+  "name": "curriculum",
+  "version": "1.0.0",
+  "description": "Curriculum responsive",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
+    "server": "http-server ./dist/"
+  },
+  "keywords": [
+    "Jeral",
+    "Garcia"
+  ],
+  "author": "Jeral Garcia Salgueras",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^4.9.2"
+  }
+}
