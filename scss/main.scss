@@ -29,6 +29,13 @@ h3 {
   &.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
+    background: rgba(lighten($primary-color, 2), 0.3);
+    font-weight: bold;
+  }
+
+  &.xSm-heading {
+    margin-bottom: 0.2rem;
+    padding: 0.2rem 1rem;
     background: rgba(lighten($primary-color, 2), 0.2);
   }
 }
@@ -74,44 +81,72 @@ main {
   }
 }
 
-
 //Acerca de
 .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: 
-  'bioimage bio bio'
-  'job1 job2 job3';
+  grid-template-areas:
+    "bioimage bio bio2"
+    "job1 job2 job3";
   grid-template-columns: repeat(3, 1fr);
 
   .bio-image {
     grid-area: bioimage;
     margin: auto;
     border-radius: 50%;
-    border:  $secondary-color 3px solid;
+    border: $secondary-color 3px solid;
+    @include easeOut;
+
+    &:hover {
+      transform: scale(1.4);
+      @include easeOut;
+    }
   }
-  
+
   .bio {
     grid-area: bio;
     font-size: 1.5rem;
+
+    p {
+      font-size: 15px;
+      text-align: justify;
+    }
   }
-  
+
+  .bio2 {
+    grid-area: bio2;
+    font-size: 1.5rem;
+
+    p {
+      font-size: 15px;
+      text-align: justify;
+    }
+  }
+
   .job-1 {
     grid-area: job1;
   }
-  
+
   .job-2 {
     grid-area: job2;
   }
-  
+
   .job-3 {
     grid-area: job3;
   }
-  
+
   .job {
     background: lighten($primary-color, 5);
     padding: 0.5rem;
     border-bottom: $secondary-color 5px solid;
+    @include easeOut;
+
+    &:hover {
+      background: $secondary-color;
+      border-bottom: lighten($primary-color, 5) 5px solid;
+      transform: scale(1.1);
+      @include easeOut;
+    }
   }
 }
 
