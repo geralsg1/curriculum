@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "Curriculum responsive",
   "main": "index.js",
+  "homepage": "https://geralsg1.github.io/curriculum",
   "scripts": {
     "sass": "node-sass -w scss/ -o dist/css/ --recursive",
+    "deploy": "gh-pages -d dist",
     "server": "http-server ./dist/"
   },
   "keywords": [
@@ -14,6 +16,7 @@
   "author": "Jeral Garcia Salgueras",
   "license": "MIT",
   "dependencies": {
+    "gh-pages": "^2.0.0",
     "node-sass": "^4.9.2"
   }
 }
